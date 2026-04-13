@@ -11,12 +11,4 @@ Supports follow-up questions via conversation history.
 
 How It Works
 
-PDF Upload
-    ↓
-PyPDFLoader → RecursiveCharacterTextSplitter (chunk=1000, overlap=200)
-    ↓
-OpenAIEmbeddings → ChromaDB (persisted locally)
-    ↓
-User Query → MMR Retriever (k=4, fetch_k=10)
-    ↓
-ChatPromptTemplate + Chat History → GPT-4.1-nano → Answer
+PDF Upload -> PyPDFLoader -> OpenAIEmbeddings -> User Query -> ChatPromptTemplate + Chat History
