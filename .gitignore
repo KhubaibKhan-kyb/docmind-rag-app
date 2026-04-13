@@ -1,0 +1,15 @@
+# Secret keys — never push this
+.env
+
+# Vector database — large binary files, rebuild locally
+chroma_db/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/

@@ -1,0 +1,62 @@
+# =========================
+# Core LangChain Ecosystem
+# =========================
+langchain
+langchain-core
+langchain-community
+langchain-text-splitters
+langchain-openai
+langchain-google-genai
+langchain-mistralai
+langgraph
+
+# =========================
+# LLM Providers
+# =========================
+openai
+google-generativeai
+mistralai
+
+# =========================
+# Vector Database (RAG Storage)
+# =========================
+chromadb
+faiss-cpu
+
+# =========================
+# Embeddings Models
+# =========================
+sentence-transformers
+
+# =========================
+# Tokenization / Utils
+# =========================
+tiktoken
+numpy
+pandas
+
+# =========================
+# Environment & Config
+# =========================
+python-dotenv
+pydantic
+
+# =========================
+# Document Loaders (RAG ingestion)
+# =========================
+pypdf
+unstructured
+beautifulsoup4
+requests
+
+# =========================
+# Optional but VERY useful for RAG apps
+# =========================
+fastapi
+uvicorn
+streamlit
+
+# =========================
+# Logging & Debugging
+# =========================
+loguru
