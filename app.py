@@ -17,7 +17,7 @@ load_dotenv()
 
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="DocMind – RAG Assistant",
+    page_title="DocMind: RAG Assistant",
     page_icon="🧠",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -326,7 +326,7 @@ with st.sidebar:
     )
 
     if uploaded_files:
-        if st.button("⚡  Process & Index"):
+        if st.button("Process & Index"):
             prog = st.progress(0, text="Loading PDFs…")
             prog.progress(0.2, text="Splitting & embedding…")
 
@@ -400,14 +400,14 @@ with col_main:
         total_chunks = sum(d["chunks"] for d in st.session_state.doc_meta)
         total_docs   = len(st.session_state.doc_meta)
         st.markdown(
-            f'<div class="status-bar">🟢 Index ready — '
+            f'<div class="status-bar">Index ready — '
             f'<strong>{total_docs}</strong> document{"s" if total_docs > 1 else ""} · '
             f'<strong>{total_chunks}</strong> chunks indexed</div>',
             unsafe_allow_html=True,
         )
     else:
         st.markdown(
-            '<div class="status-bar">⬆️ Upload PDFs in the sidebar and click '
+            '<div class="status-bar">Upload PDFs in the sidebar and click '
             '<strong>Process &amp; Index</strong> to begin.</div>',
             unsafe_allow_html=True,
         )
@@ -460,7 +460,7 @@ with col_main:
                 try:
                     answer, sources = answer_question(query)
                 except Exception as e:
-                    answer, sources = f"⚠️ Error: {e}", []
+                    answer, sources = f"Error: {e}", []
             st.session_state.messages.append({
                 "role": "assistant", "content": answer,
                 "sources": sources, "time": time.strftime("%H:%M"),
